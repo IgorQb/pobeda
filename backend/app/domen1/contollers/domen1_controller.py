@@ -1,6 +1,5 @@
 from fastapi import Depends, HTTPException, APIRouter
 from starlette.status import HTTP_400_BAD_REQUEST, HTTP_204_NO_CONTENT, HTTP_404_NOT_FOUND
-from sqlalchemy.exc import NoResultFound
 
 from ..schemas.domen1_schemas import (
   Domen1Schemas,
@@ -55,7 +54,7 @@ async def update(
     try:
         return await service.update(id=id, data=data)
     except IndexError:
-        raise HTTPException(HTTP_404_NOT_FOUND, "Нечего обновлять")
+        raise HTTPException(HTTP_404_NOT_FOUND, "Нечего обновлять.")
     except Exception as e:
         raise HTTPException(HTTP_400_BAD_REQUEST, str(e))
 
@@ -67,5 +66,7 @@ async def delete(
 ) -> None:
     try:
         return await service.delete(id=id)
+    except IndexError:
+        raise HTTPException(HTTP_404_NOT_FOUND, "Нечего удалять.")
     except Exception as e:
         raise HTTPException(HTTP_400_BAD_REQUEST, str(e))

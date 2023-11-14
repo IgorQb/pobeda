@@ -1,0 +1,21 @@
+version: "3.10"
+services:
+  angular_app:
+    build: 'frontend'
+    container_name: angular_app
+    ports:
+      - "8080:80"
+    depends_on:
+      - fastapi_app
+    networks:
+      - mynetwork
+  fastapi_app:
+    build: 'backend'
+    container_name: fastapi_app
+    ports:
+      - "9000:8080"
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    name: mynetwork

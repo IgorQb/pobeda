@@ -1,18 +1,108 @@
-<section>
-  <div class="wrapper">
-    <table mat-table [dataSource]="tableData">
+<div class="wrapper">
+  <section class="section-first">
+    <h1>Обработка обращений граждан</h1>
+    <ul class="cards">
+      <li class="cards__item">
+        <h4 class="card__title">Загрузить новые данные</h4>
+        <div class="card">
+          <div class="card__image card__image--flowers upload">
+            <img src="../../../assets/img/peredat.jpg" />
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Передать информацию на сервер для дальнейшей обработки моделью
+            </p>
+            <button class="btn btn--block card__btn">
+              Загрузить новые данные
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="cards__item">
+        <h4 class="card__title">Обработать обращение</h4>
+        <div class="card">
+          <div class="card__image card__image--flowers upload">
+            <img src="../../../assets/img/obrabotka.jpg" />
+          </div>
+          <div class="card__content">
+            <p class="card__text">
+              Обработать конкретное обращение гражданина, получить группы,
+              подгруппу
+            </p>
+            <button class="btn btn--block card__btn">
+              Обработать обращение
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="blue-section">
+    <p class="blue-section-p">
+      Наше решение представляет собой интерактивный веб-сервис, который
+      позволяет осуществлять получение группы и подгруппы у обращения. 
+      Так же возможно получение статистической выборки по всем данным после загрузки
+      .csv файла.
+    </p>
+  </section>
+
+  <section>
+    <div class="list-wrapper">
+      <h1 class="pluses">Преимущества сервиса:</h1>
+      <ul>
+        <li>
+          <div>
+            <div class="img-wrap img-wrap-icons">
+              <img src="../../../assets/img/save.png" alt="Информация" />
+              <h4>Актуальная и надежная информация</h4>
+            </div>
+            <p>
+              Предоставляем актуальную и надежную информацию о группе и
+              подгруппе в зависимости от выбранных данных
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="img-wrap img-wrap-icons">
+              <img src="../../../assets/img/analys.png" alt="Информация" />
+              <h4>Использование современных аналитических методов</h4>
+            </div>
+            <p>
+              Используем современные аналитические методы, такие как анализ
+              данных, моделирование и статистические алгоритмы, чтобы
+              предоставить систематическую и качественную выборку;
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="img-wrap img-wrap-icons">
+              <img src="../../../assets/img/dinozavr.png" alt="Удобство" />
+              <h4>Удобство использования</h4>
+            </div>
+            <p>
+              Удобен в использовании благодаря своей доступности онлайн и
+              интуитивно понятному интерфейсу, что позволяет пользователям
+              быстро получить группу и подгруппу запроса;
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- <table mat-table [dataSource]="tableData">
       <ng-container matColumnDef="Field1">
         <th mat-header-cell *matHeaderCellDef>Field1</th>
         <td mat-cell *matCellDef="let element">{{ element.field1 }}</td>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="Field2">
         <th mat-header-cell *matHeaderCellDef>Field2</th>
         <td mat-cell *matCellDef="let element">{{ element.field2 }}</td>
       </ng-container>
 
-      <!-- Weight Column -->
       <ng-container matColumnDef="Field3">
         <th mat-header-cell *matHeaderCellDef>Field3</th>
         <td mat-cell *matCellDef="let element">{{ element.field3 }}</td>
@@ -20,11 +110,10 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-    @if (isLoading === true) {
+    </table> -->
+  <!-- @if (isLoading === true) {
     <div class="spinner">
       <mat-progress-spinner [mode]="'indeterminate'"> </mat-progress-spinner>
     </div>
-    }
-  </div>
-</section>
+    } -->
+</div>

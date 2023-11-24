@@ -4,9 +4,9 @@
     <div class="header">
       <div class="left">
         <a class="header__info">
-          <button mat-button color="primary">
+          <a routerLink="['/', 'home']"  mat-button color="primary">
             <span class="team" color="primary">Команда Победа</span>
-          </button>
+          </a>
         </a>
       </div>
       <div class="right">
@@ -16,7 +16,6 @@
   </section>
   <section >
     <router-outlet class="main-page">
-      <app-home> </app-home>
     </router-outlet>
 
   </section>

@@ -1,11 +1,28 @@
 
 <ng-container>
   <section>
-    <router-outlet>
-      <app-home> </app-home>
-    </router-outlet>
+    <div class="header">
+      <div class="left">
+        <a class="header__info">
+          <a routerLink="['/', 'home']"  mat-button color="primary">
+            <span class="team" color="primary">Команда Победа</span>
+          </a>
+        </a>
+      </div>
+      <div class="right">
+        <img src="../assets/img/promobot.png" alt="Промобот" />
+      </div>
+    </div>
   </section>
-  <div class="footer">
-    <h3>powered by Pobeda team</h3>
-  </div>
+  <section >
+    <router-outlet class="main-page">
+    </router-outlet>
+
+  </section>
+  <button class="move" (click)="scrollToTop()">
+    <div>🠕</div>
+  </button>
+    <nav>
+      <div class="footer">© 2023 Победа. All rights reserved.</div>
+    </nav>
 </ng-container>

@@ -1,17 +1,41 @@
 mock_data = [
     {
-        "field1": "field1_test",
-        "field2": "field2_test",
-        "field3": "field3_test"
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения"
     },
     {
-        "field1": "field1_test",
-        "field2": "field2_test",
-        "field3": "field3_test"
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения"
     },
     {
-        "field1": "field1_test",
-        "field2": "field2_test",
-        "field3": "field3_test"
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения"
+    },    
+    {
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения"
+    }
+]
+
+mock_data_list = [
+    {
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения",
+        "appealText": "Тест обращения"
+    },
+    {
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения",
+        "appealText": "Тест обращения"
+    },
+    {
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения",
+        "appealText": "Тест обращения"
+    },    
+    {
+        "appealGroup": "Группа обращения",
+        "appealSubGroup": "Подгруппа обращения",
+        "appealText": "Тест обращения"
     }
 ]

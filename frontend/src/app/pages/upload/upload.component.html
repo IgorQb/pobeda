@@ -1,3 +1,37 @@
-<p>
-  upload works!
-</p>
+<div class="wrapper">
+  <section class="section-first">
+    <h1>Загрузить новые данные</h1>
+  </section>
+  <section class="second-section">
+    <mat-accordion class="accordion">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Графики обращений </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Тут будут графики</p>
+      </mat-expansion-panel>
+      <div class="table">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-panel-title> Таблица обращений </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-table [tableData]="appealsList"></app-table>
+        </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+    <div (click)="fileInput.click()">
+      <input
+        (change)="sendListAppeal($event)"
+        hidden
+        #fileInput
+        type="file"
+        id="file"
+        accept=".csv"
+      />
+      <a class="btn btn--block card__btn"> Загрузить .csv </a>
+    </div>
+  </section>
+</div>

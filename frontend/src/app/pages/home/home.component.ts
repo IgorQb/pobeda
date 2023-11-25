@@ -1,47 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HttpClientModule } from '@angular/common/http';
 
 import { catchError, of, takeUntil } from 'rxjs';
 
 import { Destroyer } from '../../base/destroyer';
-import { IHome } from '../../models/home/home.model';
 import { HomeServices } from './services/home.service';
-import { CommonModule } from '@angular/common';
-import { TableComponent } from '../../../shared/table/table.component';
-import { IAppeal } from '../../../shared/table/types/appeal.types';
+import { IApeal } from '../../models/home/appeal.model';
+
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [
-    MatTableModule,
-    HttpClientModule,
-    MatProgressSpinnerModule,
-    CommonModule,
-    TableComponent,
-  ],
-  providers: [HomeServices],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less',
 })
 export class HomeComponent extends Destroyer implements OnInit {
-  tableData: IAppeal[] = [{
-    'appealGroup': 'Тест',
-    'appealSubGroup': 'Тест под. группы',
-    'appealText': 'Тест текста обращенийeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeу'
-  },
-  {
-    'appealGroup': 'Тест',
-    'appealSubGroup': 'Тест под. группы',
-    'appealText': 'Тест текста обращений'
-  }];
+  // tableData: IApeal[] = [{
+  //   'appealGroup': 'Тест',
+  //   'appealSubGroup': 'Тест под. группы',
+  //   'appealText': 'Тест текста обращенийeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeу'
+  // },
+  // {
+  //   'appealGroup': 'Тест',
+  //   'appealSubGroup': 'Тест под. группы',
+  //   'appealText': 'Тест текста обращений'
+  // }];
   isLoading: boolean = false;
   displayedColumns: string[] = ['Field1', 'Field2', 'Field3'];
 
   constructor(private _homeService: HomeServices) {
     super();
+  }
+
+  test(): void {
+    console.log(1)
   }
 
   ngOnInit(): void {

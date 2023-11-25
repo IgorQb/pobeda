@@ -6,13 +6,11 @@
         <td mat-cell *matCellDef="let element"><span>{{ element.appealText }}</span></td>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="appealGroup">
         <th mat-header-cell *matHeaderCellDef>Группа обращения</th>
         <td mat-cell *matCellDef="let element"><span>{{ element.appealGroup }}</span></td>
       </ng-container>
 
-      <!-- Weight Column -->
       <ng-container matColumnDef="appealSubGroup">
         <th mat-header-cell *matHeaderCellDef>Доп. группа обращения</th>
         <td mat-cell *matCellDef="let element"><span>{{ element.appealSubGroup }}</span></td>

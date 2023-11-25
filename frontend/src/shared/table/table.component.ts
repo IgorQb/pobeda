@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Destroyer } from '../../app/base/destroyer';
 import { MatTableModule } from '@angular/material/table';
-import { IAppeal } from './types/appeal.types';
 
+import { Destroyer } from '../../app/base/destroyer';
+import { IAppealResponse, IAppealsListResponse } from '../../app/models/home/appeal.model';
 @Component({
   selector: 'app-table',
   standalone: true,
@@ -16,7 +16,7 @@ import { IAppeal } from './types/appeal.types';
 })
 export class TableComponent extends Destroyer {
 
-  @Input() tableData: IAppeal[] = [];
+  @Input() tableData: IAppealsListResponse[] = [];
 
   displayedColumns: string[] = ['appealText', 'appealGroup', 'appealSubGroup'];
 

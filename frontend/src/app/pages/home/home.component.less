@@ -1,18 +1,14 @@
-    width: 100%;
-}
-
 img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
 
-
 .btn {
   background-color: white;
-  border: 1px solid #cccccc;
-  //border-radius: 1rem;
-  color: #696969;
+  border: 1px solid #0095da;
+  border-radius: 5px 5px 5px 5px;
+  color: #0095da;
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -20,14 +16,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  :hover {
-    opacity: 0.8px;
-  }
+a:hover {
+  color: white;
+  background-color: #0095da;
+}
 
-  :visited {
-    text-decoration: none;
-  }
+a:visited {
+  text-decoration: none;
 }
 
 .btn--block {
@@ -118,10 +115,13 @@ img {
 }
 
 section.section-first {
+  display: block;
   margin-top: 0;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   font-size: 40px;
   margin-left: 20px;
   margin-top: 20px;
@@ -132,7 +132,8 @@ h1 {
 
 .list-wrapper {
   ul {
-    margin-top: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     padding-left: 16px;
     display: flex;
     list-style: none;
@@ -178,7 +179,10 @@ h1 {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
         img {
+          color: #0095da;
           width: 80px;
           height: 80px;
           margin-left: 0px;
@@ -189,8 +193,8 @@ h1 {
           }
           
           img:hover {
-            width: 100px;
-            height: 100px;
+            width: 85px;
+            height: 85px;
           }
       }
     }
@@ -201,7 +205,8 @@ h1 {
       padding-left: 16px;
       display: flex;
       list-style: none;
-      justify-content: space-between;
+      align-items: baseline;
+      // justify-content: space-between;
       align-items: flex-start;
     }
     &__task {
@@ -216,9 +221,6 @@ h1 {
 
       width: 33% !important;
 
-      p {
-        max-width: 350px;
-      }
       h4 {
         padding-left: 0;
         margin-bottom: 5px;
@@ -233,7 +235,6 @@ h1 {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-
         
         h4 {
           padding-left: 0;
@@ -264,6 +265,12 @@ h1 {
   }
 }
 
+.list-text {
+  display: flex;
+  text-align: center;
+}
+
+
 p{
   font-size: 14px;
 }
@@ -279,7 +286,7 @@ section {
 }
 
 .blue-section {
-  background-color: #02458d;
+  background-color: #0095da;
   color: white;
   padding: 30px;
   border-radius: 15px;

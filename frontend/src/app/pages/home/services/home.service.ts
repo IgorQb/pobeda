@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { URLs } from '../../../base/urls';
 import { IHome } from '../../../models/home/home.model';
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class HomeServices {
   constructor(private _httpClient: HttpClient) {}
 

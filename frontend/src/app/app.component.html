@@ -4,7 +4,7 @@
     <div class="header">
       <div class="left">
         <a class="header__info">
-          <a routerLink="['/', 'home']"  mat-button color="primary">
+          <a [routerLink]="['/']"  mat-button color="primary">
             <span class="team" color="primary">Команда Победа</span>
           </a>
         </a>
@@ -14,7 +14,7 @@
       </div>
     </div>
   </section>
-  <section >
+  <section class="body">
     <router-outlet class="main-page">
     </router-outlet>
 

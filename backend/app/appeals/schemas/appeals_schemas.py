@@ -5,11 +5,11 @@ from typing import Annotated
 from fastapi import Query, File, UploadFile
 
 class AppealSchema(BaseModel):
-    appealText: str = Field(min_length=1), Query(defaul='', description='Текст обращения гражданина')
+    appealText: str = Field(), Query(defaul='', description='Текст обращения гражданина')
 
 class AppealResponceSchema(BaseModel):
-    appealGroup: str = Field(min_length=1), Query(defaul='', description='Группа обращения')
-    appealSubGroup: str = Field(min_length=1), Query(defaul='', description='Подгруппа обращения')
+    appealGroup: str = Field(), Query(defaul='', description='Группа обращения')
+    appealSubGroup: str = Field(), Query(defaul='', description='Подгруппа обращения')
 
 class ListAppealsResponseSchema(AppealResponceSchema):
     appealText: str = Field(min_length=1), Query(defaul='', description='Текст обращения гражданина')

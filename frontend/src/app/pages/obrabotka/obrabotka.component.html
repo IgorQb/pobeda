@@ -1,3 +1,13 @@
-<p>
-  obrabotka works!
-</p>
+<div class="wrapper">
+  <section class="section-first">
+    <h1>Обработать обращение</h1>
+  </section>
+  <section class="second-section">
+    <mat-form-field class="mat-field">
+      <textarea [(ngModel)]="appeal.appealText" matInput placeholder="Текст обращения"></textarea>
+    </mat-form-field>
+    <a (click)="sendAppeal()" class="btn btn--block card__btn">
+      Обработать обращение
+    </a>
+  </section>
+</div>

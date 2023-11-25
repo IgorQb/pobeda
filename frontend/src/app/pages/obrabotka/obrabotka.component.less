@@ -1,0 +1,55 @@
+.second-section {
+  display: block;
+  padding: 30px;
+  max-height: 85vh;
+  border-radius: 15px;
+  line-height: 30px;
+  --mdc-filled-text-field-focus-active-indicator-color: #0095da;
+  --mdc-filled-text-field-disabled-input-text-color: rgba(0, 0, 0, 0.6);
+  --mdc-filled-text-field-input-text-placeholder-color: rgba(0, 0, 0, 0.6);
+  --mdc-filled-text-field-input-text-color: rgba(0, 0, 0, 0.6);
+  --mdc-dialog-container-color: white;
+  &-p {
+    padding: 40px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  ::ng-deep
+    .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-floating-label,
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-floating-label--float-above {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .mat-field {
+    width: 100%;
+    max-height: 60vh;
+  }
+
+  .btn {
+    background-color: white;
+    border: 1px solid #0095da;
+    border-radius: 5px 5px 5px 5px;
+    color: #0095da;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a:hover {
+    color: white;
+    background-color: #0095da;
+  }
+}

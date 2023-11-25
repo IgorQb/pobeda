@@ -1,0 +1,44 @@
+.second-section {
+  display: block;
+  padding: 30px;
+  max-height: 85vh;
+  border-radius: 15px;
+  line-height: 30px;
+  --mat-expansion-container-background-color: rgba(0, 0, 0, 0.04);
+  --mat-expansion-container-text-color: rgba(0, 0, 0, 0.6);
+  --mat-expansion-header-text-color: rgba(0, 0, 0, 0.6);
+
+  .btn {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #0095da;
+    border-radius: 5px 5px 5px 5px;
+    color: #0095da;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ::ng-deep .mat-expansion-indicator::after {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  a:hover {
+    color: white;
+    background-color: #0095da;
+  }
+}
+
+.table {
+  ::ng-deep .mdc-data-table__table {
+    max-width: 75%!important;
+  }
+}
+
+::ng-deep .mdc-data-table__table {
+  max-width: 75%!important;
+}

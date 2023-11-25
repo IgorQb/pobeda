@@ -7,8 +7,11 @@ from nltk.stem import SnowballStemmer
 from catboost import CatBoostClassifier
 
 
-model_group_path = 'backend\ml\groupTheme.014874'
-model_theme_path = 'backend\ml\\theme.101913'
+model_group_path = 'backend/ml/groupTheme.014874'
+model_theme_path = 'backend/ml/theme.101913'
+
+# model_group_path = './ml/groupTheme.014874'
+# model_theme_path = './ml/theme.101913'
 
 nltk.download('stopwords')
 stopwords_ru = stopwords.words("russian")

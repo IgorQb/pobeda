@@ -12,7 +12,7 @@ class AppealResponceSchema(BaseModel):
     appealSubGroup: str = Field(), Query(defaul='', description='Подгруппа обращения')
 
 class ListAppealsResponseSchema(AppealResponceSchema):
-    appealText: str = Field(min_length=1), Query(defaul='', description='Текст обращения гражданина')
+    appealText: str = Field(), Query(defaul='', description='Текст обращения гражданина')
 
 class AppealsParams:
     def __init__(
